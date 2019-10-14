@@ -1,0 +1,35 @@
+{	"Microsoft Office": {
+		"Excel": { "Years":13 , "Freq":3 , "Level":3 },
+		"PowerPoint": { "Years":15 , "Freq":4 , "Level":3 },
+		"Access": { "Years":1 , "Freq":1 , "Level":1 },
+		"Word": { "Years":15 , "Freq":5 , "Level":3 }
+	},
+	"Data Science": {
+		"SQL": { "Years":2 , "Freq":2, "Level":2 },
+		"Data Manipulation": { "Years":3 , "Freq":5, "Level":3 },
+		"Functional Programming": { "Years":3 , "Freq":5, "Level":2 },
+		"Classification": { "Years":1, "Freq":2, "Level":2 },
+		"Web Scraping": { "Years":3, "Freq":4, "Level":2 }
+	},
+	"Statistical Software": {
+		"R": { "Years":5 , "Freq":5 , "Level":3 },
+		"Python": { "Years":2, "Freq":2 , "Level":2 },
+		"Matlab": { "Years":1, "Freq":2 , "Level":1 },
+		"SPSS": { "Years":7, "Freq":3 , "Level":3 },
+		"Minitab": { "Years":2 , "Freq":1 , "Level":2 },
+		"JASP": { "Years":1 , "Freq":1 , "Level":3 }
+	},
+	"Statistical Methods": {
+		"Linear Regression": { "Years":7 , "Freq":4, "Level":3 },
+		"Non-linear Regression": { "Years":4, "Freq":2, "Level":2 },
+		"ANOVA (GLM)": { "Years":4 , "Freq":4, "Level":3 },
+		"Multilevel Models": { "Years":3 , "Freq":4 , "Level":3 },
+		"Transformations": { "Years":4 , "Freq":3 , "Level":2 },
+		"Time Series": { "Years":3 , "Freq":3 , "Level":2 }
+	},
+	"Research Design": {	
+		"Neuroscience": { "Years":3 , "Freq":2 , "Level":2 },
+		"Psychology": { "Years":2 , "Freq":2 , "Level":2 },
+		"Management": { "Years":1 , "Freq":1 , "Level":1 }
+	}
+}

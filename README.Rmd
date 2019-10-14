@@ -1,0 +1,71 @@
+---
+title: "CV"
+output: github_document
+---
+
+I made this page to give a bit of extra info on my skillsets for applications. For the code used, please see the `README.Rmd` file.
+
+-----
+
+This graph is a type of "tree map". Here, the size of each box indicates the frequency in which I use that specific skill.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=FALSE}
+format_set <- function(full.list, item.name){
+  set <- do.call(rbind, full.list[[item.name]])
+  set <- as.data.frame(set)
+  
+  set$Skill <- rownames(set)
+  rownames(set) <- NULL
+  
+  set$Level <- factor(set$Level,
+                      levels = c(1, 2, 3),
+                      labels = c('Beginner', 'Intermediate', 'Advanced'))
+  
+  set$Skill.type <- item.name
+  
+  return(set)
+
+}
+
+k.ble <- function(full.list, item.name){
+  
+  set <- format_set(full.list, item.name)
+  
+  k1 <- kable(set)
+  k2 <- kable_styling(k1, 'hover')
+  
+  k2 <- pack_rows(k2, 
+            item.name, 1, nrow(set))
+  
+  return(k2)
+
+}
+
+```
+
+```{r, echo = FALSE}
+library(ggplot2)
+library(treemapify)
+
+all.skills <- RJSONIO::fromJSON('CV Files/skillsets.json') ### read file
+
+##### .json to data frame ---------------
+skill.types <- names(all.skills)
+all.skills <- lapply(skill.types, function(x){ format_set(all.skills, x) })
+
+df <- do.call(rbind, all.skills)
+
+##### Treemap ---------------
+ggplot(df, aes(area = Freq,
+               subgroup = Skill.type,
+               fill = Skill.type,
+               label = Skill)) +
+  geom_treemap() +
+  geom_treemap_text() +
+  geom_treemap_subgroup_text(alpha = 0.3) +
+  theme(legend.position = 'none')
+```
