@@ -2,7 +2,7 @@ CV
 ================
 
 I made this page to give a bit of extra info on my skillsets for
-applications. For the code used, please see the `README.Rmd` file.
+applications. For the code used, please see the `README.Rmd` file. My full CV is also in the `CV Files` folder
 
 -----
 
